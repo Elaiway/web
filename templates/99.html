@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>2</title>
+</head>
+<body>
+<style type="text/css">
+    /*将所有的距离，间距都设置为0*/
+*{
+	padding: 0px;
+	margin: 0px;
+}
+body{
+	background-color: #F5F5F5 /*白烟色*/
+}
+/*--------------------logo,menu,login区域设计--------------------*/
+/*设置页眉的位置*/
+
+/*超级链接去下划线*/
+a{
+	text-decoration: none;
+  
+}
+.content{
+	/*响应式布局始终居中*/
+	width: 1200px;
+	margin: 25px auto;
+}
+/*图片距离*/
+.content .banner .banner_img{
+	margin-top: 20px;
+}
+/*---------------正文图片样式---------------*/
+/*整体图片横向布局*/
+.content .img_content ul{
+	width: 1280px;
+}
+.content .img_content ul li{
+	width: 360px;  /*360*3+120*/
+	float: left;
+	margin: 0 60px 60px 0; 
+	list-style: none;
+	background-color: #FFFFFF;
+	/*处理边框*/
+	margin-top: 30px;
+	height: 500px; /*列表边框*/
+	/*阴影位置， 垂直阴影位置，渐变距离，阴影尺寸，阴影颜色*/
+	/*box-shadow: 0 0 5px 3px #ccc */
+	/*浏览器兼容*/
+	-webkit-box-shadow: 0 0 5px 3px #ccc; /*谷歌浏览器*/
+	-moz-box-shadow: 0 0 5px 3px #ccc; /*火狐浏览器*/
+}
+/*标题设置*/
+.content .img_content .info h3{
+	font-size: 25px;
+	color: red;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+/*图片的段落信息设置*/
+.content .img_content .info p{
+	line-height: 25px;
+	/*加一个下边距和价格隔开*/
+	margin-bottom: 10px;
+}
+.content .img_content .info{
+	margin-left: 30px;
+	margin-right: 30px;
+}
+/*价格样式*/
+.content .img_content .info .img_btn .price{
+	color: red;
+	font-size: 20px;
+}
+
+/*购物车设置*/
+.content .img_content .info .img_btn{
+	width: 300px;
+}
+.content .img_content .info .img_btn .btn{
+	width: 60px;
+	height: 30px;
+	background-color: red;
+	text-align: center;
+	border-radius: 5px; /*圆角矩形*/
+	float: right;
+}
+.content .img_content .info .img_btn .btn .cart img{
+	width: 60px;
+	height: 20px;
+	margin-top: 5px;
+
+}
+.content .img_content .info .img_btn .price{
+	float: left;
+}
+/*页码导航栏*/
+.content .page_nav{
+	width: 100%; /*大小不超出content*/
+	height: 60px;
+	line-height: 60px;
+	/*border: 1px solid black;*/
+	/*溢出处理*/
+	overflow:hidden;
+}
+.content .page_nav ul li{
+	float: left;
+	margin-right: 20px;
+	list-style: none; 
+}
+.content .page_nav ul{
+	width: 500px;
+	margin: auto;
+	overflow:hidden;
+}
+/*第一页设置背景圆*/
+.content .page_nav .first_page{
+	border-radius: 50%;
+	background-color: #c5c5c5;
+	padding: 3px 9px; /*圆心内部边距把圆撑起来*/ 
+}
+
+/*-------------------------页脚区域设计-------------------------*/
+.footer{
+	width: 1200px;
+	height: 100px;
+	margin: 60px auto;
+	/*加一条上边框分割线*/
+	border-top:1px solid #ccc;
+	overflow: hidden; 
+}
+.footer p{
+	text-align: center;
+	line-height: 80px;
+}	
+.footer p span{
+	color: #ff1490;
+}
+
+</style>
+
+
+
+
+<script type="text/javascript">
+    var flag=true; //开关按钮
+    function show_menu(){
+        var menu1 = document.getElementById("menu1");
+        if(flag){
+            menu1.style.display="block";
+            flag = false;
+        }else{
+            menu1.style.display="none";
+            flag = true;
+        }	
+    }
+    
+    function show_menu1(){
+        var menu1 = document.getElementById("menu1");
+        menu1.style.display="none";
+        flag = true; //鼠标离开时将flag默认回true
+    }    
+</script>
+
+
+
+
+
+
+
+	<!-- --------------------正文板块-------------------- -->
+	<div class="content">
+		<!-- 设置广告栏 -->
+		<div class="img_content">
+			<ul>
+				<li>
+					<img src="{{ url_for('static', filename='images/41.jpg') }}" class="img_li">
+					<div class="info">
+						<h3></h3>
+						<p>
+							立得惠擦手纸酒店商用整箱檫手纸抽纸家用厨房纸巾厕所洗手间抹手一次性 120抽/包*整箱20包 中等尺寸
+						</p>
+						<div class="img_btn"> 
+							<!-- 价格，购买logo -->
+							<div class="price">¥ 19</div>
+							<!-- 购物车按钮 -->
+							<div class="btn">
+								<a href="#" class="cart">
+									<img src="{{ url_for('static', filename='images/cart.png') }}">
+								</a>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<img src="{{ url_for('static', filename='images/42.jpg') }}" class="img_li">
+					<div class="info">
+						<h3></h3>
+						<p>
+							梦庭 肥皂盒香皂盒子免打孔双层沥水皂架皂碟香皂置物架 粉色
+						</p>
+						<div class="img_btn"> 
+							<!-- 价格，购买logo -->
+							<div class="price">¥ 6.5</div>
+							<!-- 购物车按钮 -->
+							<div class="btn">
+								<a href="#" class="cart">
+									<img src="{{ url_for('static', filename='images/cart.png') }}">
+								</a>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<img src="{{ url_for('static', filename='images/43.jpg') }}" class="img_li">
+					<div class="info">
+						<h3></h3>
+						<p>
+							JAJALIN 挂钩粘钩无痕厨房门后衣服粘贴强力粘胶免打孔挂钩 5深蓝+5黄色
+						</p>
+						<div class="img_btn"> 
+							<!-- 价格，购买logo -->
+							<div class="price">¥4.99</div>
+							<!-- 购物车按钮 -->
+							<div class="btn">
+								<a href="#" class="cart">
+									<img src="{{ url_for('static', filename='images/cart.png') }}">
+								</a>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<img src="{{ url_for('static', filename='images/44.jpg') }}" class="img_li">
+					<div class="info">
+						<h3></h3>
+						<p>
+							洁比世 漱口杯子 情侣牙刷杯刷牙杯儿童洗漱杯塑料牙缸
+						</p>
+						<div class="img_btn"> 
+							<!-- 价格，购买logo -->
+							<div class="price">¥7.9</div>
+							<!-- 购物车按钮 -->
+							<div class="btn">
+								<a href="#" class="cart">
+									<img src="{{ url_for('static', filename='images/cart.png') }}">
+								</a>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<img src="{{ url_for('static', filename='images/45.jpg') }}" class="img_li">
+					<div class="info">
+				
+						<p>
+							晟旎尚品搓澡巾套装沐浴球浴花男女士搓澡神器拉背条加厚双面洗澡巾灰色 洗澡三件套
+						</p>
+						<div class="img_btn"> 
+							<!-- 价格，购买logo -->
+							<div class="price">¥ 10</div>
+							<!-- 购物车按钮 -->
+							<div class="btn">
+								<a href="#" class="cart">
+									<img src="{{ url_for('static', filename='images/cart.png') }}">
+								</a>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<img src="{{ url_for('static', filename='images/46.jpg') }}" class="img_li">
+					<div class="info">
+						<p>
+							桂枫 粘钩 (50丝加厚亚克力粘胶)强力无痕透明厨房卫生间免打孔免钉挂钩贴浴室门后毛巾衣服挂衣钩10个装
+						</p>
+						<div class="img_btn"> 
+							<!-- 价格，购买logo -->
+							<div class="price">¥ 8.9</div>
+							<!-- 购物车按钮 -->
+							<div class="btn">
+								<a href="#" class="cart">
+									<img src="{{ url_for('static', filename='images/cart.png') }}">
+								</a>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			
+		</div>
+		<!-- 分页 -->
+		<div class="page_nav">
+			<li><a href="http://127.0.0.1:5000">首页</a></li>
+			<li><a href="http://127.0.0.1:5000/secon">上一页</a></li>
+
+			<li><a href="http://127.0.0.1:5000">1</a></li>
+			<li><a href="http://127.0.0.1:5000/er">2</a></li>
+			<li><a href="http://127.0.0.1:5000/san">3</a></li>
+			<li><a href="http://127.0.0.1:5000/si">4</a></li>
+			<li><a href="http://127.0.0.1:5000/wu">5</a></li>
+			<li><a href="#">...</a></li>
+			<li><a href="http://127.0.0.1:5000/secon">98</a></li>
+			<li><span class="first_page">99</span></li>
+
+			<li><a href="http://127.0.0.1:5000/last">下一页</a></li>
+			<li><a href="http://127.0.0.1:5000/last">尾页</a></li>
+		</div>
+		
+	</div>
+	<!-- --------------------页脚板块-------------------- -->
+	<div class="footer">
+		<p class="p2">造烛求明，读书求理© 2023 POWERED BY <span>13组</span></p>
+	</div>
+</body>
+</html>

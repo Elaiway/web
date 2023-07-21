@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>城镇自主招工</title>
+  <link href="{{ url_for('static', filename='css/css.css') }}" rel="stylesheet" type="text/css" />
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+</head>
+<body>
+ <div class="usertipsbox">
+  <div class="usertipsmain">
+     
+      
+     
+  </div>
+</div>
+
+
+  <header class="header">
+    <div class="top">
+      <div class="logo"> <a href="#"><img src="{{ url_for('static', filename='images/logo.png') }}"></a> </div>
+      	<div class="logotips">
+   	    <img src="{{ url_for('static', filename='images/tips.png') }}"   height="70"> </div>
+    </div>
+    <!-------导航开始-------------------->
+    <div class="navbox">
+    <nav class="nav">
+      <ul>
+        <li> <a href="http://61.139.65.181:29564">首页</a> </li>
+        <li> <a href="http://61.139.65.181:29564/zhaopingchakan">招聘信息</a> </li>
+        <li> <a href="http://61.139.65.181:29564/yonghu">个人信息</a> </li>
+        <li> <a href="http://61.139.65.181:29564/denglv">登陆</a> </li>
+        <li> <a href="http://61.139.65.181:29564/zhuce">注册</a> </li>
+        <li> <a href="http://61.139.65.181:29564/fabu">招聘发布</a></li>
+ 
+       </ul>
+          <div class="sea_box">
+      <form name="dataForm" class="search" action="search.php" method="post">
+      
+        <input class="notxt" value="站内搜索" name="query" id="query" onfocus="if(value==defaultValue){value='';}" onblur="if(!value){value=defaultValue;}" onclick="if(this.value==''){this.value='';this.form.query.style.color='#fff'}" style="color:#fff;" type="text">
+        <input class="notxt1" name="Submit" value="" type="submit">
+      </form>
+    </div>
+    </nav>
+    
+    <!-------导航结束-------------------->
+ 
+  </div>
+  </header>
+  
+     <div class="flexslider banner">
+     <ul class="slides">
+        <li><a><img src="{{ url_for('static', filename='images/banner1.png') }}"></a></li>
+        <li><a><img src="{{ url_for('static', filename='images/banner2.jpg') }}"></a></li>
+    </ul>
+ </div>
+ <div class="newsbox">
+ 	<div class="menu">
+    	<h3>招聘信息</h3>
+        <p>- 最新招聘信息、实时发布 -</p>
+    </div>
+ <div class="newsindex">
+    <ul>
+        
+     <li>
+        
+        <div class="job-post">
+            <h2>招聘信息</h2>
+            <p>公司名称：ABC科技有限公司</p>
+            <p>职位：Web开发工程师</p>
+            <p>地点：北京市</p>
+            
+            <div class="requirements">
+                <h3>岗位要求</h3>
+                <ul>
+                    <li>熟悉HTML、CSS和JavaScript</li>
+                    <li>具备Web开发经验</li>
+                    <li>良好的沟通能力和团队合作精神</li>
+                </ul>
+            </div>
+            
+            <div class="how-to-apply">
+                <h3>申请方式</h3>
+                <p>请将简历发送至 hr@abc-tech.com</p>
+            </div>
+        </div>
+        
+       </li>
+       <li>
+
+        <div class="job-post">
+            <h2>招聘信息</h2>
+            <p>公司名称：CBD科技有限公司</p>
+            <p>职位：嵌入式开发工程师</p>
+            <p>地点：成都市</p>
+            
+            <div class="requirements">
+                <h3>岗位要求</h3>
+                <ul>
+                    <li>熟悉c++开发</li>
+                    <li>具备嵌入式开发经验</li>
+                    <li>良好的沟通能力和团队合作精神</li>
+                </ul>
+            </div>
+            
+            <div class="how-to-apply">
+                <h3>申请方式</h3>
+                <p>请将简历发送至 xixixic-tech.com</p>
+            </div>
+        </div>   
+        
+       </li>
+        
+    </ul>
+  </div>
+ 
+ </div>
+ 
+ 
+ <div class="foot">
+ 	<div class="footer">
+    	<div class="footleft">
+    	<h5>城镇自主招工网站</h5>
+       <p>最新招聘信息、实时发布</p>
+       
+       </div>
+       <div class="footleft">
+    	<h5>联系我们</h5>
+       <p>邮箱：1098011070@qq.com</p>
+       <p>Q  Q：1098011070</p>
+       </div>
+    </div>
+ </div>
+  
+ 
+</body>
+</html>
+
+<script src="{{ url_for('static', filename='js/jquery-1.8.0.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.flexslider.js') }}" ></script>
+
+<script>
+	$(window).load(function(){
+		  $('.flexslider').flexslider({
+			animation: "slide",
+			directionNav: false,  
+			 controlNav: true,    
+			start: function(slider){
+ 			}
+		  });
+    })
+ 
+</script>

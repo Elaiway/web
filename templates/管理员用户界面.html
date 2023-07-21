@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>User Profile</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f7;
+    }
+    
+    .container {
+      width: 80%;
+      margin: 50px auto;
+      border-radius: 10px;
+      box-shadow: 0px 3px 8px #d9d9d9;
+      background: #fff;
+      padding: 30px;
+    }
+    
+    h1 {
+      text-align: center;
+      font-weight: bold;
+      font-size: 30px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+    
+    .row {
+      margin-bottom: 10px;
+    }
+    
+    .row label {
+      font-weight: bold;
+      font-size: 18px;
+      color: #555;
+      margin-right: 20px;
+      width: 150px;
+      display: inline-block;
+    }
+    
+    .row p {
+      font-size: 18px;
+      color: #777;
+      margin: 0;
+      display: inline-block;
+    }
+    .hm{
+        width: 200px;
+        height: 100px;
+        background-color: #efff9e;
+        margin-left: 500px;
+        padding: 0px;
+        margin: opx;
+        text-align: center;
+    }
+    .hm:hover{
+    background-color:#eff8c1;;}
+
+    a{
+        text-decoration: none;
+        text-align: center;
+        line-height: 90px;
+      
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>个人信息</h1>
+    <div class="row">
+      <label>User ID:</label>
+      <p>{{ user_id }}</p>
+    </div>
+    <div class="row">
+      <label>Username:</label>
+      <p>{{ username }}</p>
+    </div>
+    <div class="row">
+      <label>Age:</label>
+      <p>{{ age }}</p>
+    </div>
+    <div class="row">
+      <label>Phone:</label>
+      <p>{{ phone }}</p>
+    </div>
+    <div class="row">
+      <label>Address:</label>
+      <p>{{ address }}</p>
+    </div>
+    <div class="row">
+      <label>Is Manager:</label>
+      <p>{{ is_manager }}</p>
+    </div>
+
+<div class="hm"><a href="http://127.0.0.1:5000/guan">管理员界面</a></div>
+
+
+</div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>城镇自主招工</title>
+  <link href="{{ url_for('static', filename='css/css.css') }}" rel="stylesheet" type="text/css" />
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+</head>
+<body>
+ <div class="usertipsbox">
+  <div class="usertipsmain">
+     
+      
+     
+  </div>
+</div>
+
+
+  <header class="header">
+    <div class="top">
+      <div class="logo"> <a href="#"><img src="{{ url_for('static', filename='images/logo.png') }}"></a> </div>
+      	<div class="logotips">
+   	    <img src="{{ url_for('static', filename='images/tips.png') }}"   height="70"> </div>
+    </div>
+    <!-------导航开始-------------------->
+    <div class="navbox">
+    <nav class="nav">
+      <ul>
+        <li> <a href="http://61.139.65.181:29564">首页</a> </li>
+        <li> <a href="http://61.139.65.181:29564/zhaopingchakan">招聘信息</a> </li>
+        <li> <a href="http://61.139.65.181:29564/yonghu">个人信息</a> </li>
+        <li> <a href="http://61.139.65.181:29564/denglv">登陆</a> </li>
+        <li> <a href="http://61.139.65.181:29564/zhuce">注册</a> </li>
+        <li> <a href="http://61.139.65.181:29564/fabu">招聘发布</a></li>
+ 
+       </ul>
+          <div class="sea_box">
+      <form name="dataForm" class="search" action="search.php" method="post">
+      
+        <input class="notxt" value="站内搜索" name="query" id="query" onfocus="if(value==defaultValue){value='';}" onblur="if(!value){value=defaultValue;}" onclick="if(this.value==''){this.value='';this.form.query.style.color='#fff'}" style="color:#fff;" type="text">
+        <input class="notxt1" name="Submit" value="" type="submit">
+      </form>
+    </div>
+    </nav>
+    
+    <!-------导航结束-------------------->
+ 
+  </div>
+  </header>
+
+	<style>
+		/* 全局样式 */
+		
+
+		header h1 {
+		    font-size: 3em;
+		    margin: 0;
+		    color: #007bff;
+		}
+
+		nav ul {
+		    margin: 0;
+		    padding: 0;
+		    list-style: none;
+		    text-align: center;
+		}
+
+		nav li {
+		    display: inline-block;
+		    margin-right: 1em;
+		}
+
+		section.login {
+		    margin: 4em auto;
+		    padding: 2em;
+		    max-width: 500px;
+		    background-color: #f8f8f8;
+		    border: 1px solid #ccc;
+		    border-radius: 5px;
+		    box-shadow:	    0px 2px 5px rgba(0, 0, 0, 0.1);
+	}
+
+	section.login h2 {
+	    font-size: 2em;
+	    margin-top: 0;
+	    margin-bottom: 1em;
+	    color: #01080f;
+	}
+
+	section.login label {
+	    display: block;
+	    font-size: 1.2em;
+	    margin-bottom: 0.5em;
+	}
+
+	section.login input[type="text"],
+	section.login input[type="password"] {
+	    width: 100%;
+	    padding: 1em;
+	    border-radius: 3px;
+	    border: none;
+	    margin-bottom: 1em;
+	    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+	    transition: all 0.2s ease-in-out;
+	}
+
+	section.login input[type="text"]:focus,
+	section.login input[type="password"]:focus {
+	    outline: none;
+	    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+	}
+
+	section.login .submit-wrapper {
+	    text-align: center;
+	}
+
+	section.login input[type="submit"] {
+	    background-color: #f58220;
+			color: #fff;
+			border: none;
+			padding: 1em 2em;
+			border-radius: 3px;
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+			display: block;
+    		margin: 0 auto
+	}
+
+	section.login input[type="submit"]:hover {
+	    background-color: #007bff;
+	    color: #fff;
+	    border: none;
+	    padding: 1em 2em;
+	    border-radius: 3px;
+	    cursor: pointer;
+	    transition: all 0.2s ease-in-out
+	}
+
+	.register-link {
+	    text-align: center;
+	}
+
+	/* 页面底部 */
+	footer {
+	    background-color: #f8f8f8;
+	    padding: 1em;
+	    text-align: center;
+	    margin-top: 4em;
+	    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+	}
+
+	footer p {
+	    margin: 0;
+	    font-size: 0.8em;
+	    color: #555;
+	}
+
+	/* 响应式布局 */
+	@media (max-width: 768px) {
+	    section.login {
+	        margin: 2em auto;
+	        max-width: none;
+	        border: none;
+	        box-shadow: none;
+	    }
+	}
+</style>
+</head> <body>
+	
+	
+	<!-- 普通用户登陆表单 -->
+	<section class="login">
+		<h2>用户登陆</h2>
+		<form action="/" method="post">
+				<input type="hidden" name="action" value="login">
+				<label for="username">用户名：</label>
+				<input type="text" id="username" name="username" required><br>
+				<label for="password">密码：</label>
+				<input type="password" id="address" name="address" required><br>
+				<input type="submit" value="登录">
+			</div>
+		</form>
+		<div class="register-link">
+			<p>还没有账号？<a href="http://127.0.0.1:5000/zhuce">注册</a></p>
+		</div>
+	</section>
+	
+<div class="foot">
+		<div class="footer">
+		   <div class="footleft">
+		   <h5>城镇自主招工网站</h5>
+		  <p>最新招聘信息、实时发布</p>
+		  <p><a href="admin/index.php">后台管理</a></p>
+		  </div>
+		  <div class="footleft">
+		   <h5>联系我们</h5>
+		  <p>邮箱：1098011070@qq.com</p>
+		  <p>Q  Q：1098011070</p>
+		  </div>
+	   </div>	

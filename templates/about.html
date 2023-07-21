@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的介绍</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f6f6f6;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        text-align: center;
+        background: linear-gradient(45deg, #FF8C00, #FFA500);
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px #ccc;
+      }
+
+      h1 {
+        font-size: 36px;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 20px;
+        font-family: 'Pacifico', cursive;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      p {
+        font-size: 18px;
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+      }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <img src="{{ url_for('static', filename='image/1.png') }}">
+      <h1>快乐购物</h1>
+      <p>联系方式：2569346456@qq.com</p>
+      <p>联系方式：1853619635@qq.com</p>
+      <p>联系地址：青海大学</p>
+    </div>
+  </body>
+</html>

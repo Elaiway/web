@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>城镇自主招工</title>
+  <link href="{{ url_for('static', filename='css/css.css') }}" rel="stylesheet" type="text/css" />
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+</head>
+<body>
+ <div class="usertipsbox">
+  <div class="usertipsmain">
+     
+      
+     
+  </div>
+</div>
+
+
+  <header class="header">
+    <div class="top">
+      <div class="logo"> <a href="#"><img src="{{ url_for('static', filename='images/logo.png') }}"></a> </div>
+      	<div class="logotips">
+   	    <img src="{{ url_for('static', filename='images/tips.png') }}"   height="70"> </div>
+    </div>
+    <!-------导航开始-------------------->
+    <div class="navbox">
+    <nav class="nav">
+      <ul>
+        <li> <a href="http://61.139.65.181:29564">首页</a> </li>
+        <li> <a href="http://61.139.65.181:29564/zhaopingchakan">招聘信息</a> </li>
+        <li> <a href="http://61.139.65.181:29564/yonghu">个人信息</a> </li>
+        <li> <a href="http://61.139.65.181:29564/denglv">登陆</a> </li>
+        <li> <a href="http://61.139.65.181:29564/zhuce">注册</a> </li>
+        <li> <a href="http://61.139.65.181:29564/fabu">招聘发布</a></li>
+       </ul>
+
+          <div class="sea_box">
+      <form name="dataForm" class="search" action="search.php" method="post">
+      
+        <input class="notxt" value="站内搜索" name="query" id="query" onfocus="if(value==defaultValue){value='';}" onblur="if(!value){value=defaultValue;}" onclick="if(this.value==''){this.value='';this.form.query.style.color='#fff'}" style="color:#fff;" type="text">
+        <input class="notxt1" name="Submit" value="" type="submit">
+      </form>
+    </div>
+    </nav>
+    
+    <!-------导航结束-------------------->
+ 
+  </div>
+  </header>
+  <style>
+    body {
+        background-color: #f9f5eb;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .job {
+        width: 25%;
+        max-width: 300px;
+        margin: 10px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    h2 {
+        color: #555;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    p {
+        color: #888;
+        font-size: 16px;
+        margin-top: 5px;
+        line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+    
+    <div class="container">
+        {% for row in results %}   
+        <div class="job">
+            <h2>招聘人</h2>
+            <td>{{ row[0] }}</td>
+            <h2>招聘地址</h2>
+            <td>{{ row[1] }}</td>
+            <h2>招聘年龄</h2>
+            <td>{{ row[2] }}</td>
+            <h2>联系电话</h2>
+            <td>{{ row[3] }}</td>
+            <h2>薪资待遇</h2>
+            <td>{{ row[4] }}</td>
+            <h2>招聘说明</h2>
+            <td>{{ row[5] }}</td>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+
+<div class="foot">
+    <div class="footer">
+       <div class="footleft">
+       <h5>城镇自主招工网站</h5>
+      <p>最新招聘信息、实时发布</p>
+      
+      </div>
+      <div class="footleft">
+       <h5>联系我们</h5>
+      <p>邮箱：1098011070@qq.com</p>
+      <p>Q  Q：1098011070</p>
+      </div>
+   </div>

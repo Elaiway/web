@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>招聘信息</title>
+  <style>
+    body {
+        background-color: #f9f5eb;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .job {
+        width: 25%;
+        max-width: 300px;
+        margin: 10px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    h2 {
+        color: #555;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    p {
+        color: #888;
+        font-size: 16px;
+        margin-top: 5px;
+        line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+    <h1>招聘信息</h1>
+    <div class="container">
+        {% for row in results %}   
+        <div class="job">
+            <h2>招聘人</h2>
+            <td>{{ row[0] }}</td>
+            <h2>招聘地址</h2>
+            <td>{{ row[1] }}</td>
+            <h2>招聘年龄</h2>
+            <td>{{ row[2] }}</td>
+            <h2>联系电话</h2>
+            <td>{{ row[3] }}</td>
+            <h2>薪资待遇</h2>
+            <td>{{ row[4] }}</td>
+            <h2>招聘说明</h2>
+            <td>{{ row[5] }}</td>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
